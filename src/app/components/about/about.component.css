@@ -1,0 +1,164 @@
+/* about.component.css */
+.about-page {
+  min-height: 100vh;
+  background: url('/pexx.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Styles (Consistent with other pages) */
+.nav-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  color: wheat;
+  padding: 8px 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #00ff4c;
+  color: #0077b5;
+}
+
+.nav-btn.active {
+  background: #00ff4c;
+  color: #0077b5;
+}
+
+/* About Content */
+.about-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.about-section {
+  max-width: 800px;
+  width: 100%;
+}
+
+.about-card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 20px;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Typography */
+.about-title {
+  color: #00ff4c;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.section-heading {
+  color: #00ff4c;
+  font-size: 1.8rem;
+  margin: 30px 0 15px;
+}
+
+.about-intro,
+.experience-text {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Skills List */
+.skills-list {
+  color: white;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.skills-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.skills-list strong {
+  color: #00ff4c;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 30px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-intro,
+  .experience-text {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    padding: 6px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .skills-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    animation: none;
+    opacity: 1;
+  }
+}
